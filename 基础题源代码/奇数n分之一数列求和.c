@@ -3,8 +3,9 @@ int main() {
     int n;
     printf("请输入一个正整数（奇数）：");
     scanf("%d", &n);
-    if (n % 2 == 0 ) {
-        printf("输入的正整数不是奇数\n");
+    if (n % 2 == 0 || n <= 0) {
+        printf("输入的数不符合要求。\n");
+        return 1;
     } else {
         double sum = 0;
         for (int i = 1; i <= n; i += 2) {
